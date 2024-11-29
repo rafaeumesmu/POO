@@ -1,0 +1,14 @@
+CREATE DATABASE poo;
+
+USE poo;
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(50) NOT NULL,
+    descricao TEXT NOT NULL,
+    peso DECIMAL(10, 2) NOT NULL,
+    quantidade INT NOT NULL,
+    unidade VARCHAR(15) CHECK (unidade IN ('metro', 'metro quadrado', 'litro', 'kg')) NOT NULL
+);
+
+
